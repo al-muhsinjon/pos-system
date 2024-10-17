@@ -1,6 +1,5 @@
 "use client";
 import { useAuth } from "@/components/auth-prowider";
-import { setAccessToken } from "@/utils/auth";
 import { UserOutlined } from "@ant-design/icons";
 import { Button, Form, FormProps, Input } from "antd";
 import { useRouter } from "next/navigation";

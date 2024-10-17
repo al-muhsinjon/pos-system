@@ -6,7 +6,6 @@ import {
   removeAccessToken,
   setAccessToken,
 } from "@/utils/auth";
-import jwt from "jsonwebtoken";
 import { useRouter, usePathname } from "next/navigation";
 import {
   createContext,
@@ -23,13 +22,6 @@ interface AuthContextType {
   };
   login: (token: string) => void;
   logout: () => void;
-}
-
-interface DecodeForProps {
-  id: string;
-  username: string;
-  role: "Cashier" | "SuperAdmin";
-  roleId: string;
 }
 
 const AuthContext = createContext<AuthContextType>({

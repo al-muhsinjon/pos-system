@@ -29,8 +29,8 @@ export async function POST(req: Request) {
 }
 
 export async function PUT(req: Request) {
-  await connectToDatabase();
   const { name, quantity, price } = await req.json();
+  await connectToDatabase();
   const product = await Product.findOne({ name });
   if (!product) {
     return NextResponse.json(
@@ -50,7 +50,7 @@ export async function PUT(req: Request) {
   );
 }
 
-export async function GET(req: Request) {
+export async function GET() {
   try {
     await connectToDatabase();
     const products = await Product.find();

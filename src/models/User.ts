@@ -1,6 +1,5 @@
 import mongoose, { Document, Schema } from "mongoose";
 import { nanoid } from "nanoid";
-import { v4 as uuidv4 } from "uuid";
 
 export interface IUser extends Document {
   id: string;
